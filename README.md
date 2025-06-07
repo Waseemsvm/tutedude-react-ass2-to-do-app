@@ -7,5 +7,6 @@
 - Click on checkbox to toggle done
 - Click on the x button to delete todo
 - At the Bottom, shows count of open todos.
+- Added favicon in the titlebar
 
 ## Deploy Link
