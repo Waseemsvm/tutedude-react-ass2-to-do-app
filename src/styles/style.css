@@ -1,0 +1,195 @@
+*,
+*::after,
+*::before {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body,
+#root {
+  background-color: rgb(235, 235, 235);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  background-color: rgb(255 255 255);
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  .todo-container {
+    margin: 0 1.5rem;
+  }
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 3rem 0;
+}
+
+.todo-container > h1 {
+  text-align: left;
+  width: 100%;
+  font-family: sans-serif;
+  color: rgb(94, 97, 97);
+  margin-bottom: 0.75rem;
+}
+
+.todo-container > .todo-input {
+  width: 100%;
+  display: flex;
+}
+
+.todo-container > .todo-list {
+  margin-top: 1.25rem;
+  padding: 0 1rem;
+  flex: auto;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.todo-container > .todo-list > ul {
+  list-style-type: none;
+}
+
+.todo-container .todo-item {
+  margin: 1.15rem 0;
+  padding: 0.5rem;
+  border: 0.5px solid black;
+  display: flex;
+  border-radius: 0.75rem;
+}
+
+.todo-container .todo-item > .todo-text {
+  flex: auto;
+  margin-left: 0.5rem;
+}
+
+.todo-container .todo-item > .todo-text.todo-done {
+  text-decoration: line-through;
+}
+
+.todo-container .todo-item > .todo-del {
+  min-width: 1rem;
+  max-height: 1.5rem;
+  height: 1.25rem;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(94, 97, 97);
+  align-self: center;
+}
+
+.todo-container .todo-item > .todo-del:active {
+  background-color: rgb(255, 6, 6);
+}
+
+.todo-container .todo-input-inner {
+  flex: auto;
+  margin-right: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  border-bottom: 1px solid black;
+}
+
+.todo-container .todo-input-btn {
+  min-width: 2rem;
+  min-height: 2rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(94, 97, 97);
+}
+.todo-container .todo-input-btn:active {
+  background-color: rgb(120, 119, 119);
+}
+
+.todo-container > .todo-counter {
+  text-align: left;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+@media only screen and (min-width: 480px) {
+  .main {
+    background-color: rgb(255 255 255);
+    max-width: 70rem;
+    max-height: 35rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    margin: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .todo-container {
+    width: 25rem;
+  }
+}
+
+.modal-dialog[open] {
+  margin: auto;
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: yellow;
+}
+
+.modal-close-btn {
+  margin-left: 2rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: rgb(94, 97, 97);
+}
+
+.modal-close-btn:active {
+  background-color: rgb(120, 119, 119);
+}
+
+.success-modal[open] {
+  position: absolute;
+  bottom: 50px;
+  margin: auto;
+  height: 2.5rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: green;
+  color: white;
+  animation: msg-fade 1.5s linear;
+}
+
+@keyframes msg-fade {
+  0% {
+    opacity: 0;
+    bottom: 100px;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 150px;
+  }
+}
