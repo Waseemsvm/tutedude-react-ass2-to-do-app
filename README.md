@@ -10,3 +10,5 @@
 - Added favicon in the titlebar
 
 ## Deploy Link
+
+https://waseem-todo-app.netlify.app/
